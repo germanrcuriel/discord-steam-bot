@@ -19,9 +19,9 @@ class Bot {
   }
 
   onMessage (message) {
-    if (this.shouldReply(message)) {
-      this.processReply(message)
-    }
+    if (this.shouldReply(message, (type) => {
+      this.processReply(type, message)
+    })
   }
 
   shouldReply (message) {
@@ -30,14 +30,17 @@ class Bot {
     const isDm = message.channel.type === 'dm'
     const isMention = message.mentions.users.findAll('id', config.bot.id).length
 
-    return isDm || isMention
+    if (isDm) return callback('dm')
+    if (isMention) return callback('mention')
   }
 
-  processReply (message) {
+  processReply (type, message) {
+    const bot = (type === 'dm') ? '' : `<@!${config.bot.id}> `
+
     switch (message.content) {
-      case `<@!${config.bot.id}> !`:
+      case `${bot}!`:
         return this.replyWithStatus(message)
-      case `<@!${config.bot.id}> love`:
+      case `${bot}love`:
         return this.replyWithLove(message)
       default:
         return this.replyWithDefault(message)
