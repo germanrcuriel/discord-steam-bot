@@ -21,7 +21,7 @@ class Bot {
   onMessage (message) {
     if (this.shouldReply(message, (type) => {
       this.processReply(type, message)
-    })
+    }))
   }
 
   shouldReply (message) {
