@@ -1,6 +1,6 @@
 {
   "name": "discord-steam-bot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "bin": {
     "discord-steam-bot": "bin/discord-steam-bot.js"
   },
