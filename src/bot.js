@@ -19,12 +19,12 @@ class Bot {
   }
 
   onMessage (message) {
-    if (this.shouldReply(message, (type) => {
+    this.shouldReply(message, (type) => {
       this.processReply(type, message)
-    }))
+    })
   }
 
-  shouldReply (message) {
+  shouldReply (message, callback) {
     if (message.author.bot) return false
 
     const isDm = message.channel.type === 'dm'
@@ -39,7 +39,7 @@ class Bot {
 
     switch (message.content) {
       case `${bot}!`:
-        return this.replyWithStatus(message)
+        return this.replyWithStatus(message, type)
       case `${bot}love`:
         return this.replyWithLove(message)
       default:
@@ -47,8 +47,9 @@ class Bot {
     }
   }
 
-  replyWithStatus (message) {
-    this.steam.getStoredPlayers()
+  replyWithStatus (message, type) {
+    const channel = (type === 'dm') ? message.channel : null
+    this.steam.getStoredPlayers(channel)
   }
 
   replyWithLove (message) {
@@ -59,10 +60,11 @@ class Bot {
     message.channel.send('...')
   }
 
-  sendMessage (message) {
+  sendMessage (message, channel) {
     if (_.isArray(message)) message = _.compact(message)
 
-    const channel = client.guilds.first().channels.find('name', config.discord.channel)
+    const defaultChannel = client.guilds.first().channels.find('name', config.discord.channel)
+    channel = (channel) ? channel : defaultChannel
 
     if (message.length) {
       channel.send(message)

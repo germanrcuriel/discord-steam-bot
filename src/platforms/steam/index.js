@@ -105,7 +105,7 @@ class SteamPlatform {
     return false
   }
 
-  getStoredPlayers (player) {
+  getStoredPlayers (channel) {
     let messages = []
 
     _.map(this.players, (player) => {
@@ -118,7 +118,7 @@ class SteamPlatform {
       }
     })
 
-    this.sendMessage(messages)
+    this.sendMessage(messages, channel)
   }
 }
 
