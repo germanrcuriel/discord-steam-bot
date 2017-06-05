@@ -1,13 +1,13 @@
 const config = {
   bot: {
-    id: '',
-    token: ''
+    id: '', // Your bot id
+    token: '' // Your bot user token
   },
   discord: {
-    channel: ''
+    channel: 'general' // Your discord channel
   },
   steam: {
-    token: '',
+    token: '', // Your steam token
     timeout: 30000,
     messages: {
       idle: '{{NAME}} is at the menus',
@@ -19,7 +19,9 @@ const config = {
       base: 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key={{TOKEN}}&steamids=',
       userid: 'http://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/?key={{TOKEN}}&vanityurl='
     },
-    players: []
+    players: [
+      'germanrcuriel' // An array of user names
+    ]
   }
 }
 
