@@ -2,6 +2,10 @@
 
 ![](http://i.imgur.com/ajuhmG1.png)
 
+[![NPM Version](https://badge.fury.io/js/discord-steam-bot.svg)](https://npmjs.org/package/discord-steam-bot)
+[![Build Status](https://api.travis-ci.org/germanrcuriel/discord-steam-bot.svg?branch=master)](https://travis-ci.org/germanrcuriel/discord-steam-bot)
+[![Package downloads](http://img.shields.io/npm/dm/discord-steam-bot.svg)](https://npmjs.org/package/discord-steam-bot)
+
 Get your friends information in real time.
 
 ### Installation
