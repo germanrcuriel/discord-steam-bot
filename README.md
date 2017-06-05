@@ -6,6 +6,16 @@ Get your friends information in real time.
 
 ### Installation
 
+#### Local
+
+```
+$ git clone git@github.com:germanrcuriel/discord-steam-bot.git
+$ cd discord-steam-bot
+$ npm install
+```
+
+#### Global
+
 ```
 $ npm install -g discord-steam-bot
 ```
@@ -44,4 +54,10 @@ and run the bot
 
 ```
 pm2 start discord-steam-bot
+```
+
+or, if installed locally
+
+```
+pm2 start ./bin/discord-steam-bot.js
 ```
