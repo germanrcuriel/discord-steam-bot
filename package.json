@@ -1,7 +1,9 @@
 {
   "name": "discord-steam-bot",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
+  "bin": {
+    "discord-steam-bot": "bin/discord-steam-bot.js"
+  },
   "license": "MIT",
   "dependencies": {
     "async": "^2.4.1",
