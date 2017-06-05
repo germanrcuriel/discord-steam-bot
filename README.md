@@ -1,5 +1,7 @@
 ## Discord Steam Bot
 
+![](http://i.imgur.com/ajuhmG1.png)
+
 Get your friends information in real time.
 
 ### Installation
