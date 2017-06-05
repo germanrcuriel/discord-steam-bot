@@ -1,6 +1,6 @@
 ## Discord Steam Bot
 
-![](http://i.imgur.com/ajuhmG1.png)
+![](http://i.imgur.com/qeKRGXf.png)
 
 [![NPM Version](https://badge.fury.io/js/discord-steam-bot.svg)](https://npmjs.org/package/discord-steam-bot)
 [![Build Status](https://api.travis-ci.org/germanrcuriel/discord-steam-bot.svg?branch=master)](https://travis-ci.org/germanrcuriel/discord-steam-bot)
