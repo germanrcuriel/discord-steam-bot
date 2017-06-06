@@ -1,10 +1,16 @@
 {
   "name": "discord-steam-bot",
+  "description": "A Discord bot to get your steam friends statuses",
   "version": "0.1.0",
+  "author": "Germán Robledo <germanrcuriel@gmail.com>",
   "bin": {
     "discord-steam-bot": "bin/discord-steam-bot.js"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/germanrcuriel/discord-steam-bot.git"
+  },
   "dependencies": {
     "async": "^2.4.1",
     "discord.js": "^11.1.0",
